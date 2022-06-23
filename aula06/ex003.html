@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa</title>
+    <style>
+        body{
+            font-size: 20pt;
+            color: white;
+            background-color: rgb(105, 105, 173);
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        /*
+        var n1 = window.prompt('Digite um número!')
+        var n2 = window.prompt('Digite outro número!')
+        var soma = n1 + n2
+        window.alert('A soma dos valores é ' + soma)
+        */
+
+        //Vamos converter o valor de PROMPT de STRING para Number
+        var n1 = Number(window.prompt('Digite um número!'))//String
+        var n2 = Number(window.prompt('Digite outro número!'))//String
+        var soma = n1 + n2
+        window.alert(`A soma dos valores ${n1}+${n2} é ${soma}`)
+
+
+        //Conversão de Number para String
+        /*
+            window.alert('A soma das variaveis é ' + String(soma)) 
+
+            OU 
+
+            window.alert('A soma das variaveis é ' + soma.toString())
+         */
+
+    </script>
+</body>
+</html>
