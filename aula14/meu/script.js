@@ -1,30 +1,32 @@
 function calcular(){
-
-    var inicio = document.getElementById('inicio')
+    var ini = document.getElementById('inicio')
     var fim = document.getElementById('fim')
     var passo = document.getElementById('passo')
     var res = document.getElementById('res')
 
-    //Imprimindo erro caso falte dados válidos
-
-    if (inicio.value.length <= 0 || fim.value.length <= 0 || passo.value.length <= 0) {
-        alert('[ERRO] Por favor! Insira dados válidos!')
-    }   else{
-            res.innerHTML = 'Contando: <br>'
-            //Convertendo Strings para Number
-            var i = Number(inicio.value)
-            var f = Number(fim.value)
-            var p = Number(passo.value)
-            if(p <= 0){
-                alert('Dado inválido para passo!! Considerando PASSO = 1')
-                res.innerHTML += 'Impossível Contar'
-                p = 1
-            }else {
-                alert('erro')
-             }
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert('[ERRO] Faltam dados!')
+        res.innerHTML = 'Impossível Contar!'
+    } else {
+        res.innerHTML = 'Contando: <br>'
+        var i = Number(ini.value)
+        var f = Number(fim.value)
+        var p = Number(passo.value)
+        if (p <= 0){
+            alert('Passo inválido! Considerando PASSO 1')
+            p = 1
         }
+        //CONTAGEM CRESCENTE
+        if (i < f){
+           for(var c = i; c <= f; c += p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }    
+        } else {
+        //CONTAGEM REGRESSIVA
+            for(var c = i; c >= f; c -= p){
+                res.innerHTML += `${c} \u{1F449}`
+            }
+        }
+        res.innerHTML += `\u{1F3C1}`
+    }
 }
-
-
-
-
